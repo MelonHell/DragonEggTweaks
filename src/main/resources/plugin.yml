@@ -1,0 +1,5 @@
+name: DragonEggTweaks
+version: @version@
+main: ru.melonhell.dragoneggtweaks.Main
+api-version: 1.16
+authors: [ MelonHell ]
