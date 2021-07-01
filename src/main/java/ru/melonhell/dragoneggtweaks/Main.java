@@ -24,7 +24,7 @@ public final class Main extends JavaPlugin {
 
         this.getServer().getPluginManager().registerEvents(new DisableGravity(), this);
         this.getServer().getPluginManager().registerEvents(new DisableTeleport(), this);
-        this.getServer().getPluginManager().registerEvents(new DropEveryTime(), this);
+        this.getServer().getPluginManager().registerEvents(new DropEveryTime(this), this);
     }
 
     @Override

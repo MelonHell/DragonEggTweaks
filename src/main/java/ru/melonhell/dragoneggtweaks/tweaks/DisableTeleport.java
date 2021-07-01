@@ -8,7 +8,7 @@ import ru.melonhell.dragoneggtweaks.Main;
 
 public class DisableTeleport implements Listener {
     @EventHandler
-    public void dragonEggTpEvent(BlockFromToEvent event) {
+    public void blockFromToEvent(BlockFromToEvent event) {
         if (!Main.getMainConfig().getBoolean("DisableTeleport")) return;
         if (event.getBlock().getType().equals(Material.DRAGON_EGG)) {
             event.setCancelled(true);

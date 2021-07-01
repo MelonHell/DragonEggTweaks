@@ -10,7 +10,7 @@ import ru.melonhell.dragoneggtweaks.Main;
 
 public class DisableGravity implements Listener {
     @EventHandler
-    private void onBlockPhys(EntityChangeBlockEvent e) {
+    private void entityChangeBlockEvent(EntityChangeBlockEvent e) {
         if (!Main.getMainConfig().getBoolean("DisableGravity")) return;
         if (e.getEntityType() == EntityType.FALLING_BLOCK) {
             Block b = e.getBlock();
