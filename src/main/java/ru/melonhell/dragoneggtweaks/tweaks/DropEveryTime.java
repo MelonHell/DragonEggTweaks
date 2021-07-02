@@ -48,6 +48,10 @@ public class DropEveryTime implements Listener {
         if (!event.getEntityType().equals(EntityType.ENDER_DRAGON)) return;
         if (!world.getEnvironment().equals(World.Environment.THE_END)) return;
 
+        double dropChance = Main.getMainConfig().getDouble("DragonEggDropChance");
+        if (dropChance == 0) return;
+        if (dropChance < 1 && Math.random() > dropChance) return;
+
         Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
             for (int i = 0; i < 30; i++) {
                 Block portal = findPortal(world);

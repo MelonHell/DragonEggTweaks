@@ -19,6 +19,7 @@ public final class Main extends JavaPlugin {
         config.addDefault("DisableGravity", true);
         config.addDefault("DisableTeleport", true);
         config.addDefault("DropEveryTime", true);
+        config.addDefault("DragonEggDropChance", 1.0);
         config.options().copyDefaults(true);
         saveConfig();
 
